@@ -3,12 +3,13 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  images:{
-    domains:[
+  images: {
+    domains: [
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
-    ]
-  }
-}
+      "res.cloudinary.com",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
