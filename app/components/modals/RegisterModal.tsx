@@ -15,7 +15,6 @@ import { toast } from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import Button from "../Button";
 
-
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
@@ -38,6 +37,7 @@ const RegisterModal = () => {
       .post("/api/register", data)
       .then(() => {
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("Something went wrong");
